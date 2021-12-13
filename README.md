@@ -5,7 +5,7 @@ NodeJS has DOMException built in, but it's not globally available, and you can't
 
 This package exposes the [`DOMException`](https://developer.mozilla.org/en-US/docs/Web/API/DOMException) class that comes from NodeJS itself. (including all of the legacy codes)
 
-<sub>(plz don't depend on this package in any other environment other than node >=10.5)</sub>
+<sub>Minium node requirement is node >=10.5 (at which point worker thread got introduced)<br>Fyi, DOMException was [expsoed globaly](https://nodejs.org/docs/latest-v17.x/api/globals.html#domexception) in v17</sub>
 
 ```js
 import DOMException from 'node-domexception'
