@@ -34,9 +34,9 @@ console.assert(DOMException.INUSE_ATTRIBUTE_ERR === 10)
 
 # Background
 
-The only possible way is to use some web-ish tools that have been introduced into NodeJS that throws a DOMException and catch the constructor. This is exactly what this package dose for you and exposes it.<br>
+The only possible way is to use some web-ish tools that have been introduced into NodeJS that throws a DOMException and catch the constructor. This is exactly what this package does for you and exposes it.<br>
 This way you will have the same class that NodeJS has and you can check if the error is a instance of DOMException.<br>
-The instanceof check would not have worked with a custom class such as the DOMException provided by domenic which also is much larger in size since it has to re-construct the hole class from the ground up.
+The instanceof check would not have worked with a custom class such as the DOMException provided by domenic which also is much larger in size since it has to re-construct the whole class from the ground up.
 
 The DOMException is used in many places such as the Fetch API, File & Blobs, PostMessaging and more. <br>
 Why they decided to call it **DOM**, I don't know
