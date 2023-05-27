@@ -25,5 +25,8 @@
       "type": "github",
       "url": "https://paypal.me/jimmywarting"
     }
-  ]
+  ],
+  "scripts": {
+    "test": "node --test"
+  }
 }
