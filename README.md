@@ -23,7 +23,7 @@ it no longer have any cjs or esm exports and it's attached to globalThis.DOMExce
 v1.x used a older [tech](https://github.com/jimmywarting/node-domexception/blob/c2024740c6502f80ad2f62c8ad58d6cec61b05f3/index.js) which depended on `node:worker_threads` to obtain
 `DOMException` which works all the way down to NodeJS v10.5+
 
-If are not supporting older NodeJS versions (before v17) then you won't need this package at all.
+If you are not supporting older NodeJS versions (before v17) then you won't need this package at all.
 My personal recommendation is that you update to a newer NodeJS version.
 This pkg will likely be deprecated once v18 becomes LTS
 
