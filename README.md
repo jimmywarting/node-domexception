@@ -8,30 +8,26 @@ This package exposes the [`DOMException`](https://developer.mozilla.org/en-US/do
 ## Install
 
 ```bash
-# esm-only (makes use of atob | require NodeJS 16+)
+# makes use of atob | require NodeJS 16+
 npm install node-domexception
 
-# cjs (makes use of worker_thread | require NodeJS 10+)
+# makes use of worker_thread | require NodeJS 10+
 npm install node-domexception@1.x
 ```
 
 v2.x now depend on global `atob` to obtain `DOMException` from a error.
 which also binds it to NodeJS v16+ (at which point `atob` become globally available).
-This NodeJS dependency free solution is better for cross env platform solutions.
-if you are stuck with cjs then you can only do async `import()` from cjs projects.
+This NodeJS dependency/export free solution is better for cross env platform solutions.
+it no longer have any cjs or esm exports and it's attached to globalThis.DOMException only if needed.
 
 v1.x used a older [tech](https://github.com/jimmywarting/node-domexception/blob/c2024740c6502f80ad2f62c8ad58d6cec61b05f3/index.js) which depended on `node:worker_threads` to obtain
-`DOMException` which works all the way down to v10.5
-v1.x was also written in cjs, so if you want to support NodeJS v10.5+ or can't
-use ESM then install v1.x
+`DOMException` which works all the way down to NodeJS v10.5+
 
 If are not supporting older NodeJS versions (before v17) then you won't need this package at all.
 My personal recommendation is that you update to a newer NodeJS version.
+This pkg will likely be deprecated once v18 becomes LTS
 
 ```js
-import { DOMException } from 'node-domexception'
-
-// it also act as a pollyfill (so you can use globalThis.DOMException)
 import 'node-domexception'
 
 // You could also do conditional import.
