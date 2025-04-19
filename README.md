@@ -1,3 +1,19 @@
+# Deprecated
+
+`DOMException` have been implemented for quite some time now. (require Node 18+)
+
+Use your platform's native DOMException instead.
+
+Update the `engines` field in `package.json` to Node.js 18 or above: "node": ">=18".
+```json
+{
+  "engine": {
+    "node": ">=18"
+  }
+}
+```
+
+
 # DOMException
 An implementation of the DOMException class from NodeJS
 
